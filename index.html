@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Matrix</title>
+</head>
+
+<body style="margin: 0;" onresize="location.reload()">
+    <canvas id="canvas" />
+    <script>
+        const canvas = document.getElementById('canvas');
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight;
+        let p = Array(256).join(1).split('');
+        const ctx = canvas.getContext("2d");
+        setInterval(() => {
+            ctx.fillStyle = "rgba(0,0,0,0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgba(0,255,0,1)";
+            p = p.map((v, i) => {
+                ctx.fillText(String.fromCharCode(Math.floor(2720 + Math.random() * 33)), i * 10, v);
+                v += 10;
+                if (v > 768 + Math.random() * 10000) {
+                    v = 0;
+                }
+                return v;
+            })
+        }, 33);
+    </script>
+</body>
+
+</html>
+<!--
+    The original code came from a code golf challenge on r/programming
+    http://redd.it/1ag0c3
+-->
