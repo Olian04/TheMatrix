@@ -1,0 +1,46 @@
+{
+  "name": "matrix-effect",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "storybook": "start-storybook -p 6006 -c .storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Olian04/matrix-effect.git"
+  },
+  "keywords": [
+    "matrix",
+    "effect",
+    "js",
+    "react",
+    "the",
+    "matrix",
+    "background",
+    "animation",
+    "animated"
+  ],
+  "author": "Olian04",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Olian04/matrix-effect/issues"
+  },
+  "homepage": "https://github.com/Olian04/matrix-effect#readme",
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/react": "^3.4.0",
+    "@types/react": "^16.3.2",
+    "babel-core": "^6.26.0",
+    "typescript": "^2.8.1"
+  },
+  "dependencies": {
+    "react": "^16.3.0"
+  }
+}
